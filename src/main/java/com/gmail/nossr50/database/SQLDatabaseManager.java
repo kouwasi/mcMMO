@@ -59,7 +59,8 @@ public final class SQLDatabaseManager implements DatabaseManager {
                     "&requireSSL=true";
         else
             connectionString+=
-                    "?useSSL=false";
+                    "?allowPublicKeyRetrieval=true"+
+                    "&useSSL=false";
 
         try {
             // Force driver to load if not yet loaded
